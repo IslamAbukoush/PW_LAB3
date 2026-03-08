@@ -293,47 +293,89 @@ body {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ── Responsive nav ── */
-@media (max-width: 820px) {
-  .nav-toggle {
-    display: flex;
-  }
+/* ── Bootstrap Navbar Overrides ── */
+.site-navbar {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 72px;
+}
 
-  .primary-nav {
+.site-navbar .container {
+  min-height: 72px;
+  align-items: center;
+}
+
+/* Keep logo as custom flex layout (override Bootstrap .navbar-brand) */
+.site-navbar .navbar-brand.site-header__logo {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* Custom hamburger button (replaces Bootstrap's default toggler icon) */
+.site-nav-toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius);
+}
+
+.site-nav-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.site-nav-toggler[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.site-nav-toggler[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.site-nav-toggler[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile collapse panel (< lg = 992px) */
+@media (max-width: 991.98px) {
+  .site-navbar .navbar-collapse {
     position: absolute;
     top: 72px;
     left: 0;
     right: 0;
+    z-index: 99;
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-border);
-    flex-direction: column;
-    align-items: flex-start;
     padding: var(--space-sm) var(--space-md) var(--space-md);
-    gap: var(--space-sm);
     box-shadow: var(--shadow-md);
-    /* hidden by default */
-    display: none;
   }
 
-  .primary-nav.is-open {
-    display: flex;
-  }
-
-  .primary-nav__list {
-    flex-direction: column;
-    align-items: flex-start;
+  .site-navbar .navbar-nav {
     width: 100%;
   }
 
-  .primary-nav__link {
+  .site-navbar .nav-link.primary-nav__link {
     width: 100%;
     padding: 0.75rem 1rem;
     font-size: 1rem;
   }
 
-  .nav-cta {
+  .site-navbar .nav-cta {
     width: 100%;
     text-align: center;
+    margin-top: var(--space-xs);
+    margin-left: 0 !important;
     padding: 0.85rem 1rem;
     font-size: 1rem;
   }
@@ -992,6 +1034,45 @@ body {
   font-size: 0.78rem;
   color: var(--color-text-muted);
   text-align: center;
+}
+
+/* ── Bootstrap Form Controls Override ── */
+.form-control,
+.form-select {
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0,119,182,0.12);
+  outline: none;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+}
+
+.form-label span {
+  color: var(--color-primary);
+}
+
+/* Ensure Bootstrap row inside form aligns with flex column layout */
+.contact__form > .row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @media (max-width: 860px) {
