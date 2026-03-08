@@ -667,6 +667,56 @@
   </footer>
 
   <!-- ══════════════════════════════════════
+       MASCOT — Sparky the Tooth (Clippy‑style)
+  ══════════════════════════════════════ -->
+  <div class="mascot" id="mascot" aria-label="Dental mascot Sparky the Tooth">
+
+    <!-- Speech bubble (visible on hover or tap) -->
+    <div class="mascot__bubble" role="tooltip" id="mascotBubble">
+      <p class="mascot__bubble-greeting">👋 Hi, I&rsquo;m <strong>Sparky</strong>!</p>
+      <p class="mascot__bubble-msg">Ready for a brighter, healthier smile? Our friendly team is here for you every step of the way!</p>
+      <a href="#contact" class="mascot__bubble-cta">Book Free Consultation &rarr;</a>
+    </div>
+
+    <!-- Dismiss button -->
+    <button class="mascot__dismiss" id="mascotDismiss" aria-label="Dismiss mascot" title="Dismiss">&times;</button>
+
+    <!-- Sparky SVG character -->
+    <div class="mascot__body" aria-hidden="true">
+      <svg class="mascot__svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Left arm (waves) -->
+        <g class="mascot__arm mascot__arm--left">
+          <path d="M 24 62 Q 7 56 10 44" stroke="#00B4D8" stroke-width="4.5" stroke-linecap="round"/>
+          <circle cx="10" cy="44" r="6.5" fill="#00B4D8"/>
+        </g>
+        <!-- Right arm (sways) -->
+        <g class="mascot__arm mascot__arm--right">
+          <path d="M 96 62 Q 113 56 110 44" stroke="#00B4D8" stroke-width="4.5" stroke-linecap="round"/>
+          <circle cx="110" cy="44" r="6.5" fill="#00B4D8"/>
+        </g>
+        <!-- Main tooth body -->
+        <path d="M 22 36 C 20 14, 38 6, 60 8 C 82 6, 100 14, 98 36 L 93 74 C 91 86, 85 94, 78 94 C 74 94, 72 87, 70 79 C 68 87, 64 91, 60 91 C 56 91, 52 87, 50 79 C 48 87, 46 94, 42 94 C 35 94, 29 86, 27 74 Z" fill="white" stroke="#0077B6" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- Gloss / shine -->
+        <ellipse cx="39" cy="22" rx="8" ry="5" fill="rgba(0,180,216,0.22)" transform="rotate(-20 39 22)"/>
+        <ellipse cx="52" cy="15" rx="4" ry="2.5" fill="rgba(0,180,216,0.15)" transform="rotate(-15 52 15)"/>
+        <!-- Left eye -->
+        <circle cx="44" cy="45" r="6.5" fill="#1D2D44"/>
+        <circle cx="46.5" cy="43" r="2.5" fill="white"/>
+        <!-- Right eye -->
+        <circle cx="76" cy="45" r="6.5" fill="#1D2D44"/>
+        <circle cx="78.5" cy="43" r="2.5" fill="white"/>
+        <!-- Rosy cheeks -->
+        <ellipse cx="34" cy="57" rx="8" ry="5.5" fill="rgba(255,140,140,0.3)"/>
+        <ellipse cx="86" cy="57" rx="8" ry="5.5" fill="rgba(255,140,140,0.3)"/>
+        <!-- Smile -->
+        <path d="M 42 59 Q 60 72 78 59" stroke="#1D2D44" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <!-- Sparkle star (top-right) -->
+        <path class="mascot-sparkle" d="M 88 12 L 90 7 L 92 12 L 97 14 L 92 16 L 90 21 L 88 16 L 83 14 Z" fill="#00B4D8" opacity="0.8"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
        MOBILE ONLY — Sticky CTA Bar
   ══════════════════════════════════════ -->
   <div class="mobile-cta-bar" role="navigation" aria-label="Quick actions">
@@ -714,6 +764,40 @@
       btn.disabled = true;
       btn.style.backgroundColor = 'var(--color-accent)';
     });
+
+    // ── Mascot ──
+    const mascot        = document.getElementById('mascot');
+    const mascotDismiss = document.getElementById('mascotDismiss');
+    const mascotBody    = mascot && mascot.querySelector('.mascot__body');
+
+    // Tap/click: toggle bubble open class (mobile-friendly)
+    if (mascot) {
+      mascot.addEventListener('click', function(e) {
+        if (e.target === mascotDismiss || mascotDismiss.contains(e.target)) return;
+        mascot.classList.toggle('bubble-open');
+      });
+    }
+
+    // Dismiss
+    if (mascotDismiss) {
+      mascotDismiss.addEventListener('click', function(e) {
+        e.stopPropagation();
+        mascot.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        mascot.style.opacity = '0';
+        mascot.style.transform = 'translateY(80px) scale(0.5)';
+        setTimeout(() => mascot.remove(), 420);
+      });
+    }
+
+    // Restart float animation after wiggle on hover-out
+    if (mascotBody) {
+      mascot.addEventListener('mouseleave', () => {
+        mascotBody.style.animation = 'none';
+        // Force reflow
+        void mascotBody.offsetWidth;
+        mascotBody.style.animation = '';
+      });
+    }
   </script>
 </body>
 </html>
