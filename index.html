@@ -87,6 +87,32 @@
     </section>
 
     <!-- ══════════════════════════════════════
+         MOBILE ONLY — QUICK INFO STRIP
+    ══════════════════════════════════════ -->
+    <section class="mobile-quick-info" aria-label="Why choose us" id="mobileQuickInfo">
+      <div class="container">
+        <h2 class="mobile-quick-info__title">Why Dr. Yousef?</h2>
+        <div class="mobile-quick-info__cards">
+          <div class="mobile-quick-info__card">
+            <svg class="mobile-quick-info__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M24 6C17 6 11 12 11 19c0 4 1.5 7.5 3.5 10.5L17 38c.5 2.5 1.5 4 3.5 4s3-1.5 2.5-4.5l-.5-3c-.3-1.5.5-2.5 1.5-2.5s1.8 1 1.5 2.5l-.5 3C24.5 40.5 25.5 42 27.5 42s3-1.5 3.5-4l2.5-8.5C35.5 26.5 37 23 37 19c0-7-6-13-13-13z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            </svg>
+            <span><strong>20+ Years</strong> of Expert Dental Care</span>
+          </div>
+          <div class="mobile-quick-info__card">
+            <svg class="mobile-quick-info__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span><strong>3,500+</strong> Happy Patients Treated</span>
+          </div>
+          <div class="mobile-quick-info__card">
+            <svg class="mobile-quick-info__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Certified &amp; Insured</strong> — Pain-Free Guarantee</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn mobile-quick-info__cta">Book Your Appointment &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
          SECTION 2 — SERVICES
     ══════════════════════════════════════ -->
     <section class="services section section--alt" id="services">
@@ -631,6 +657,27 @@
       </div>
     </div>
   </footer>
+
+  <!-- ══════════════════════════════════════
+       MOBILE ONLY — Sticky CTA Bar
+  ══════════════════════════════════════ -->
+  <div class="mobile-cta-bar" role="navigation" aria-label="Quick actions">
+    <a href="tel:+96265550192" class="mobile-cta-bar__btn mobile-cta-bar__btn--call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.33 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l1.92-1.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      Call Now
+    </a>
+    <a href="#contact" class="mobile-cta-bar__btn mobile-cta-bar__btn--book">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+      Book Appointment
+    </a>
+  </div>
 
   <script>
     // Mobile nav toggle

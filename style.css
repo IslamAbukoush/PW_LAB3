@@ -1136,3 +1136,212 @@ body {
     text-align: center;
   }
 }
+
+/* =============================================
+   MOBILE-ONLY: Quick Info Strip
+   ============================================= */
+.mobile-quick-info {
+  display: none; /* hidden on desktop */
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  padding: var(--space-md) 0;
+  color: var(--color-white);
+}
+
+.mobile-quick-info__title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.mobile-quick-info__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: var(--space-md);
+}
+
+.mobile-quick-info__card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  font-size: 0.93rem;
+  color: var(--color-white);
+  backdrop-filter: blur(4px);
+}
+
+.mobile-quick-info__icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: var(--color-white);
+  stroke: var(--color-white);
+}
+
+.mobile-quick-info__cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-white);
+  font-size: 1rem;
+  padding: 0.9rem;
+}
+
+.mobile-quick-info__cta:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 640px) {
+  .mobile-quick-info {
+    display: block;
+  }
+}
+
+/* =============================================
+   MOBILE-ONLY: Sticky CTA Bar
+   ============================================= */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 16px rgba(0, 42, 80, 0.13);
+}
+
+.mobile-cta-bar__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background-color var(--transition);
+}
+
+.mobile-cta-bar__btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.mobile-cta-bar__btn--call {
+  background-color: var(--color-bg-alt);
+  color: var(--color-primary);
+  border-right: 1px solid var(--color-border);
+}
+
+.mobile-cta-bar__btn--call:hover,
+.mobile-cta-bar__btn--call:focus {
+  background-color: var(--color-primary-light);
+}
+
+.mobile-cta-bar__btn--book {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.mobile-cta-bar__btn--book:hover,
+.mobile-cta-bar__btn--book:focus {
+  background-color: var(--color-primary-dark);
+}
+
+@media (max-width: 640px) {
+  .mobile-cta-bar {
+    display: flex;
+  }
+
+  /* push body content above the sticky bar */
+  body {
+    padding-bottom: 68px;
+  }
+}
+
+/* =============================================
+   GLOBAL MOBILE RESPONSIVE ENHANCEMENTS
+   ============================================= */
+
+/* Reduce section vertical padding on small screens */
+@media (max-width: 640px) {
+  .section {
+    padding: var(--space-lg) 0;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-md);
+  }
+
+  .section-header__title {
+    font-size: 1.55rem;
+  }
+
+  /* Trust strip: stack vertically */
+  .hero__trust {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  /* About section body padding */
+  .about__title {
+    font-size: 1.5rem;
+  }
+
+  /* Stats bar: 2 columns on small screens (already done at 700px, keep) */
+
+  /* Footer: centre bottom bar */
+  .site-footer__bottom .container {
+    text-align: center;
+  }
+
+  /* Gallery: hide caption overlay always visible */
+  .gallery__item figcaption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Extra-small screens (< 400px) */
+@media (max-width: 400px) {
+  .hero__title {
+    font-size: 1.75rem;
+  }
+
+  .hero__lead {
+    font-size: 0.97rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .about__badge {
+    width: 90px;
+    height: 90px;
+  }
+
+  .about__badge-number {
+    font-size: 1.5rem;
+  }
+
+  .stats-bar__number {
+    font-size: 1.5rem;
+  }
+}
