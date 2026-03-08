@@ -47,6 +47,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  scroll-padding-top: 78px; /* offset for sticky header */
 }
 
 body {
@@ -222,19 +223,7 @@ body {
   color: var(--color-primary);
 }
 
-/* Primary nav */
-.primary-nav {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-}
-
-.primary-nav__list {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
+/* Nav link styles (used by Bootstrap navbar items) */
 .primary-nav__link {
   display: block;
   padding: 0.45rem 0.75rem;
@@ -253,44 +242,31 @@ body {
   background-color: var(--color-primary-light);
 }
 
+/* Active nav link (scroll-spy) */
+.primary-nav__link.active {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .primary-nav__link.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 0.75rem;
+    right: 0.75rem;
+    height: 2px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+  }
+}
+
 .nav-cta {
   white-space: nowrap;
   padding: 0.6rem 1.3rem;
   font-size: 0.88rem;
-}
-
-/* Hamburger button (mobile) */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 40px;
-  height: 40px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-  border-radius: var(--radius);
-}
-
-.nav-toggle span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-text);
-  border-radius: 2px;
-  transition: transform var(--transition), opacity var(--transition);
-}
-
-.nav-toggle[aria-expanded="true"] span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.nav-toggle[aria-expanded="true"] span:nth-child(2) {
-  opacity: 0;
-}
-.nav-toggle[aria-expanded="true"] span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ── Bootstrap Navbar Overrides ── */
@@ -1424,6 +1400,36 @@ body {
 
   .stats-bar__number {
     font-size: 1.5rem;
+  }
+}
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.62s ease, transform 0.62s ease;
+}
+
+.reveal.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger sibling reveals */
+.reveal:nth-child(2) { transition-delay: 0.10s; }
+.reveal:nth-child(3) { transition-delay: 0.20s; }
+.reveal:nth-child(4) { transition-delay: 0.30s; }
+.reveal:nth-child(5) { transition-delay: 0.40s; }
+.reveal:nth-child(6) { transition-delay: 0.50s; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 

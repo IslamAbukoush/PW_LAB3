@@ -65,6 +65,8 @@
         class="hero__bg"
         src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&q=80&auto=format&fit=crop"
         alt="Modern dental clinic interior — bright, clean and welcoming"
+        loading="eager"
+        fetchpriority="high"
       />
       <div class="container hero__content">
         <p class="hero__eyebrow">Your Trusted Dental Partner</p>
@@ -661,7 +663,7 @@
     <div class="site-footer__bottom">
       <div class="container">
         <p>&copy; <span id="year"></span> Dr. Yousef Abu Koush Dental Clinic. All rights reserved.</p>
-        <p>Designed with care &mdash; built with vanilla HTML &amp; CSS.</p>
+        <p>Built with Bootstrap 5 &amp; vanilla CSS &mdash; designed with care.</p>
       </div>
     </div>
   </footer>
@@ -798,6 +800,44 @@
         mascotBody.style.animation = '';
       });
     }
+
+    // ── Scroll Reveal ──
+    const revealEls = [
+      ...document.querySelectorAll('.service-card'),
+      ...document.querySelectorAll('.testimonial-card'),
+      ...document.querySelectorAll('.gallery__item'),
+      ...document.querySelectorAll('.section-header'),
+      ...document.querySelectorAll('.about__inner'),
+      ...document.querySelectorAll('.contact__inner'),
+      ...document.querySelectorAll('.stats-bar'),
+      ...document.querySelectorAll('.mobile-quick-info__card'),
+    ];
+    revealEls.forEach(el => el.classList.add('reveal'));
+
+    const revealIO = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal--visible');
+          revealIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => revealIO.observe(el));
+
+    // ── Scroll Spy (active nav link) ──
+    const spySections = document.querySelectorAll('main section[id]');
+    const spyLinks    = document.querySelectorAll('.site-navbar .primary-nav__link');
+
+    const spyIO = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          spyLinks.forEach(l => { l.classList.remove('active'); l.removeAttribute('aria-current'); });
+          const active = document.querySelector(`.site-navbar a[href="#${entry.target.id}"]`);
+          if (active) { active.classList.add('active'); active.setAttribute('aria-current', 'page'); }
+        }
+      });
+    }, { rootMargin: '-50% 0px -50% 0px' });
+    spySections.forEach(s => spyIO.observe(s));
   </script>
 </body>
 </html>
