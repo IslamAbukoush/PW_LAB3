@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dr. Yousef Abu Koush — Expert dental care you can trust. Modern dentistry with a gentle touch." />
+  <title>Dr. Yousef Abu Koush | Dental Clinic</title>
+
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       HEADER / NAV
+  ══════════════════════════════════════ -->
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <!-- Logo -->
+      <a href="#home" class="site-header__logo" aria-label="Dr. Yousef Abu Koush – Home">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 4C14 4 8 9 8 15c0 3.5 1.5 6.5 3 9l2 8c.5 2 1.5 4 4 4s3.5-2 3-5l-.5-3.5c-.3-2 .8-3.5 0-3.5s.3 1.5 0 3.5L19 33c-.5 3 .5 5 3 5s3.5-2 4-4l2-8c1.5-2.5 3-5.5 3-9 0-6-6-11-12-11z" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-text__name">Dr. Yousef Abu Koush</span>
+          <span class="logo-text__sub">Dental Clinic</span>
+        </span>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="primary-nav" id="primaryNav" role="navigation" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a href="#home"         class="primary-nav__link">Home</a></li>
+          <li><a href="#services"     class="primary-nav__link">Services</a></li>
+          <li><a href="#about"        class="primary-nav__link">About</a></li>
+          <li><a href="#testimonials" class="primary-nav__link">Testimonials</a></li>
+          <li><a href="#contact"      class="primary-nav__link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn--primary nav-cta">Book Appointment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════
+         SECTION 1 — HERO
+    ══════════════════════════════════════ -->
+    <section class="hero" id="home">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <img
+        class="hero__bg"
+        src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&q=80&auto=format&fit=crop"
+        alt="Modern dental clinic interior — bright, clean and welcoming"
+      />
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Your Trusted Dental Partner</p>
+        <h1 class="hero__title">A Healthier Smile<br>Starts Here</h1>
+        <p class="hero__lead">
+          State-of-the-art dentistry delivered with compassion and precision.
+          From routine check-ups to complete smile makeovers — we've got you covered.
+        </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Book an Appointment</a>
+          <a href="#services" class="btn btn--outline">Explore Services</a>
+        </div>
+        <ul class="hero__trust">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            20+ Years Experience
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            3 500+ Happy Patients
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Certified & Insured
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 2 — SERVICES
+    ══════════════════════════════════════ -->
+    <section class="services section section--alt" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__eyebrow">What We Offer</span>
+          <h2 class="section-header__title">Our Dental Services</h2>
+          <div class="divider"></div>
+          <p class="section-header__subtitle">
+            From preventive care to complete smile transformations, we provide
+            comprehensive dental treatments in a comfortable, modern environment.
+          </p>
+        </div>
+
+        <ul class="services__grid">
+
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 6C17 6 11 12 11 19c0 4 1.5 7.5 3.5 10.5L17 38c.5 2.5 1.5 4 3.5 4s3-1.5 2.5-4.5l-.5-3c-.3-1.5.5-2.5 1.5-2.5s1.8 1 1.5 2.5l-.5 3C24.5 40.5 25.5 42 27.5 42s3-1.5 3.5-4l2.5-8.5C35.5 26.5 37 23 37 19c0-7-6-13-13-13z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">General Dentistry</h3>
+            <p class="service-card__text">
+              Routine exams, X-rays, professional cleaning and cavity fillings to
+              keep your teeth healthy and strong year after year.
+            </p>
+          </li>
+
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.2"/>
+                <path d="M16 28s3-5 8-5 8 5 8 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="18" cy="21" r="2" fill="currentColor"/>
+                <circle cx="30" cy="21" r="2" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Teeth Whitening</h3>
+            <p class="service-card__text">
+              Professional-grade in-office whitening that removes years of staining
+              in a single visit — safe, fast and dramatically effective.
+            </p>
+          </li>
+
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="14" width="24" height="20" rx="4" stroke="currentColor" stroke-width="2.2"/>
+                <path d="M18 14v-2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="2.2"/>
+                <path d="M24 22v4M22 24h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Dental Implants</h3>
+            <p class="service-card__text">
+              Permanent, natural-looking replacements for missing teeth. Titanium
+              implants that look, feel and function just like your real teeth.
+            </p>
+          </li>
+
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 32c0-8 4-16 14-16s14 8 14 16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M16 32h16M13 36h22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Orthodontics</h3>
+            <p class="service-card__text">
+              Traditional braces and clear-aligner therapy to straighten teeth
+              and correct bite issues for patients of all ages.
+            </p>
+          </li>
+
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 20h20v14a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4V20z" stroke="currentColor" stroke-width="2.2"/>
+                <path d="M10 20h28" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M20 20v-4a4 4 0 0 1 8 0v4" stroke="currentColor" stroke-width="2.2"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Porcelain Veneers</h3>
+            <p class="service-card__text">
+              Ultra-thin ceramic shells bonded to the front surface of teeth to
+              instantly correct shape, size, colour and minor misalignment.
+            </p>
+          </li>
+
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 10v4M24 34v4M10 24h4M34 24h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2.2"/>
+                <circle cx="24" cy="24" r="4" fill="currentColor" opacity=".25"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Root Canal Therapy</h3>
+            <p class="service-card__text">
+              Gentle, pain-free treatment to save an infected tooth, eliminate
+              discomfort and restore full function — often in a single appointment.
+            </p>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 3 — ABOUT
+    ══════════════════════════════════════ -->
+    <section class="about section" id="about">
+      <div class="container about__inner">
+
+        <div class="about__image-wrap">
+          <img
+            src="src/doc.png"
+            alt="Dr. Yousef Abu Koush in his dental clinic"
+            class="about__photo"
+          />
+          <div class="about__badge">
+            <span class="about__badge-number">20+</span>
+            <span class="about__badge-label">Years of<br>Experience</span>
+          </div>
+        </div>
+
+        <div class="about__body">
+          <span class="section-header__eyebrow">Meet the Doctor</span>
+          <h2 class="about__title">Dr. Yousef Abu Koush</h2>
+          <div class="divider" style="margin: 0.75rem 0 1.25rem;"></div>
+
+          <p class="about__text">
+            Dr. Yousef Abu Koush is a highly experienced general and cosmetic dentist
+            with over 20 years of dedicated practice. He earned his dental degree with
+            distinction and completed advanced training in implantology and aesthetic
+            dentistry at leading European institutions.
+          </p>
+          <p class="about__text">
+            His philosophy is simple: every patient deserves pain-free, honest, and
+            personalised care. Whether you are coming in for a routine clean or a full
+            smile makeover, Dr. Abu Koush takes the time to listen, explain, and
+            deliver results that last.
+          </p>
+
+          <ul class="about__highlights">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Board-Certified General &amp; Cosmetic Dentist
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Fellow of the International College of Dentists
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Advanced Training in Dental Implants &amp; Veneers
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Fluent in Arabic, English &amp; Hebrew
+            </li>
+          </ul>
+
+          <a href="#contact" class="btn btn--primary about__cta">Book a Consultation</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 4 — TESTIMONIALS
+    ══════════════════════════════════════ -->
+    <section class="testimonials section section--alt" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__eyebrow">Patient Stories</span>
+          <h2 class="section-header__title">What Our Patients Say</h2>
+          <div class="divider"></div>
+          <p class="section-header__subtitle">
+            Real experiences from real patients. We are proud of the trust our
+            community has placed in us.
+          </p>
+        </div>
+
+        <ul class="testimonials__grid">
+
+          <li class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              &ldquo;Dr. Abu Koush completely transformed my smile with veneers. I was
+              nervous at first, but he took his time to explain every step. The results
+              are beyond what I imagined. I smile with confidence for the first time in
+              years!&rdquo;
+            </blockquote>
+            <div class="testimonial-card__author">
+              <img
+                src="https://i.pravatar.cc/80?img=47"
+                alt="Portrait of Rania M."
+                class="testimonial-card__avatar"
+              />
+              <div>
+                <strong>Rania M.</strong>
+                <span>Porcelain Veneers Patient</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              &ldquo;I had a root canal done here and I was shocked at how painless it
+              was. The clinic is spotless, the staff are incredibly warm, and Dr. Yousef
+              is genuinely one of the most skilled and caring dentists I&rsquo;ve ever
+              visited.&rdquo;
+            </blockquote>
+            <div class="testimonial-card__author">
+              <img
+                src="https://i.pravatar.cc/80?img=12"
+                alt="Portrait of Khalid A."
+                class="testimonial-card__avatar"
+              />
+              <div>
+                <strong>Khalid A.</strong>
+                <span>Root Canal Patient</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              &ldquo;My whole family has been coming here for over 10 years &mdash; my
+              kids, my parents, and myself. Dr. Abu Koush remembers every patient by
+              name. The whitening treatment gave me results I could see immediately.
+              Absolutely recommend!&rdquo;
+            </blockquote>
+            <div class="testimonial-card__author">
+              <img
+                src="https://i.pravatar.cc/80?img=32"
+                alt="Portrait of Lina S."
+                class="testimonial-card__avatar"
+              />
+              <div>
+                <strong>Lina S.</strong>
+                <span>Teeth Whitening Patient</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              &ldquo;Getting implants felt like a big decision, but Dr. Abu Koush walked
+              me through every detail. Six months later my implant feels completely
+              natural. The investment was absolutely worth it and I wish I had done it
+              sooner.&rdquo;
+            </blockquote>
+            <div class="testimonial-card__author">
+              <img
+                src="https://i.pravatar.cc/80?img=68"
+                alt="Portrait of Omar T."
+                class="testimonial-card__avatar"
+              />
+              <div>
+                <strong>Omar T.</strong>
+                <span>Dental Implant Patient</span>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+        <!-- Stats bar -->
+        <ul class="stats-bar">
+          <li class="stats-bar__item">
+            <span class="stats-bar__number">3,500+</span>
+            <span class="stats-bar__label">Patients Treated</span>
+          </li>
+          <li class="stats-bar__item">
+            <span class="stats-bar__number">20+</span>
+            <span class="stats-bar__label">Years in Practice</span>
+          </li>
+          <li class="stats-bar__item">
+            <span class="stats-bar__number">98%</span>
+            <span class="stats-bar__label">Satisfaction Rate</span>
+          </li>
+          <li class="stats-bar__item">
+            <span class="stats-bar__number">12</span>
+            <span class="stats-bar__label">Services Offered</span>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 5 — GALLERY
+    ══════════════════════════════════════ -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__eyebrow">Our Clinic &amp; Results</span>
+          <h2 class="section-header__title">A Glimpse Inside</h2>
+          <div class="divider"></div>
+          <p class="section-header__subtitle">
+            Modern equipment, a calming atmosphere, and smile results that
+            speak for themselves.
+          </p>
+        </div>
+
+        <div class="gallery__grid">
+
+          <figure class="gallery__item gallery__item--tall">
+            <img
+              src="https://images.unsplash.com/photo-1584467735815-f778f274e296?w=800&q=80&auto=format&fit=crop"
+              alt="Dentist examining a patient in a modern dental chair"
+              loading="lazy"
+            />
+            <figcaption>Gentle, attentive care</figcaption>
+          </figure>
+
+          <figure class="gallery__item">
+            <img
+              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80&auto=format&fit=crop"
+              alt="Modern dental clinic reception area"
+              loading="lazy"
+            />
+            <figcaption>Welcoming reception</figcaption>
+          </figure>
+
+          <figure class="gallery__item">
+            <img
+              src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80&auto=format&fit=crop"
+              alt="State-of-the-art dental equipment"
+              loading="lazy"
+            />
+            <figcaption>State-of-the-art equipment</figcaption>
+          </figure>
+
+          <figure class="gallery__item gallery__item--wide">
+            <img
+              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=1200&q=80&auto=format&fit=crop"
+              alt="Patient smiling with perfect white teeth after treatment"
+              loading="lazy"
+            />
+            <figcaption>Real smile results</figcaption>
+          </figure>
+
+          <figure class="gallery__item">
+            <img
+              src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=800&q=80&auto=format&fit=crop"
+              alt="Dentist discussing treatment plan with patient"
+              loading="lazy"
+            />
+            <figcaption>Clear communication, every visit</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION 6 — CONTACT
+    ══════════════════════════════════════ -->
+    <section class="contact section section--alt" id="contact">
+      <div class="container contact__inner">
+
+        <!-- Left: info -->
+        <div class="contact__info">
+          <span class="section-header__eyebrow">Get In Touch</span>
+          <h2 class="contact__title">Book Your Appointment</h2>
+          <div class="divider" style="margin: 0.75rem 0 1.5rem;"></div>
+          <p class="contact__lead">
+            Ready for a healthier, more confident smile? Fill out the form and
+            our team will confirm your appointment within 24 hours.
+          </p>
+
+          <ul class="contact__details">
+            <li>
+              <span class="contact__details-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </span>
+              <div>
+                <strong>Address</strong>
+                <span>14 Al-Nahda Street, Amman, Jordan</span>
+              </div>
+            </li>
+            <li>
+              <span class="contact__details-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.33 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l1.92-1.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </span>
+              <div>
+                <strong>Phone</strong>
+                <span>+962 6 555 0192</span>
+              </div>
+            </li>
+            <li>
+              <span class="contact__details-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </span>
+              <div>
+                <strong>Email</strong>
+                <span>info@abukoush-dental.com</span>
+              </div>
+            </li>
+            <li>
+              <span class="contact__details-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </span>
+              <div>
+                <strong>Opening Hours</strong>
+                <span>Sun &ndash; Thu: 9:00 AM &ndash; 7:00 PM</span>
+                <span>Fri &ndash; Sat: 10:00 AM &ndash; 3:00 PM</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact__form-wrap">
+          <form class="contact__form" id="appointmentForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="fname" name="fname" placeholder="Yousef" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="lname" name="lname" placeholder="Abu Koush" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+962 7X XXX XXXX" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service Interested In <span aria-hidden="true">*</span></label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service&hellip;</option>
+                <option>General Dentistry</option>
+                <option>Teeth Whitening</option>
+                <option>Dental Implants</option>
+                <option>Orthodontics</option>
+                <option>Porcelain Veneers</option>
+                <option>Root Canal Therapy</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message / Preferred Date</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your concern or a preferred appointment date&hellip;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary form-submit">Send Request</button>
+
+            <p class="form-note">We respect your privacy. Your information is never shared.</p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+
+      <div class="site-footer__brand">
+        <a href="#top" class="site-header__logo site-footer__logo" aria-label="Back to top">
+          <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 4C14 4 8 9 8 15c0 3.5 1.5 6.5 3 9l2 8c.5 2 1.5 4 4 4s3.5-2 3-5l-.5-3.5c-.3-2 .8-3.5 0-3.5s.3 1.5 0 3.5L19 33c-.5 3 .5 5 3 5s3.5-2 4-4l2-8c1.5-2.5 3-5.5 3-9 0-6-6-11-12-11z" fill="currentColor"/>
+          </svg>
+          <span class="logo-text">
+            <span class="logo-text__name">Dr. Yousef Abu Koush</span>
+            <span class="logo-text__sub">Dental Clinic</span>
+          </span>
+        </a>
+        <p class="site-footer__tagline">
+          Caring for your smile since 2004. Modern dentistry with a gentle, personal touch.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <h3 class="site-footer__nav-heading">Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Dr. Yousef</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Book Appointment</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__contact">
+        <h3 class="site-footer__nav-heading">Contact</h3>
+        <address>
+          <p>14 Al-Nahda Street, Amman, Jordan</p>
+          <p><a href="tel:+96265550192">+962 6 555 0192</a></p>
+          <p><a href="mailto:info@abukoush-dental.com">info@abukoush-dental.com</a></p>
+        </address>
+        <p class="site-footer__hours">Sun&ndash;Thu: 9 AM &ndash; 7 PM &nbsp;|&nbsp; Fri&ndash;Sat: 10 AM &ndash; 3 PM</p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Dr. Yousef Abu Koush Dental Clinic. All rights reserved.</p>
+        <p>Designed with care &mdash; built with vanilla HTML &amp; CSS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const nav    = document.getElementById('primaryNav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    // Close nav when a link is clicked
+    nav.querySelectorAll('.primary-nav__link, .nav-cta').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Dynamic year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form submission feedback
+    document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!this.checkValidity()) {
+        this.reportValidity();
+        return;
+      }
+      const btn = this.querySelector('.form-submit');
+      btn.textContent = 'Message Sent ✓';
+      btn.disabled = true;
+      btn.style.backgroundColor = 'var(--color-accent)';
+    });
+  </script>
+</body>
+</html>
