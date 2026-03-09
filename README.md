@@ -1,12 +1,12 @@
 # Dr. Yousef Abu Koush — Dental Clinic Landing Page
 
-A clean, professional landing page for **Dr. Yousef Abu Koush**, a practicing dentist with over 20 years of experience. Built as part of a web development lab assignment using only vanilla HTML and CSS — no frameworks.
+A clean, professional landing page for **Dr. Yousef Abu Koush**, a practicing dentist with over 20 years of experience. Built as part of a web development lab assignment using **Bootstrap 5** and custom vanilla CSS.
 
 ---
 
 ## Live Demo
 
-🔗 **[View Live Site](https://yourusername.github.io/PW_LAB2/)** ← _replace with your deployed URL_
+🔗 **[View Live Site](https://pw-lab-3.vercel.app/)**
 
 ---
 
@@ -36,11 +36,11 @@ A clean, professional landing page for **Dr. Yousef Abu Koush**, a practicing de
 
 ## Features
 
-- **Sticky navigation** with smooth-scroll links and a mobile hamburger menu
+- **Sticky navigation** with smooth-scroll links and a Bootstrap mobile hamburger menu
 - **Hero section** with a full-viewport background photo, trust indicators, and dual CTAs
-- **Services section** — 6 dental services in a responsive card grid
+- **Services section** — 6 dental services in a responsive Bootstrap card grid
 - **About section** — doctor bio, credentials, and an experience badge
-- **Testimonials** — 4 patient reviews + animated stats bar (3 500+ patients, 98% satisfaction)
+- **Testimonials** — 4 patient reviews + animated stats bar (3,500+ patients, 98% satisfaction)
 - **Gallery** — CSS Grid mosaic with 5 clinic/results photos and hover captions
 - **Contact / Booking form** — validated HTML form with select menu and textarea
 - **Footer** — links, address, hours, and dynamic copyright year
@@ -52,25 +52,28 @@ A clean, professional landing page for **Dr. Yousef Abu Koush**, a practicing de
 | Layer | Technology |
 |---|---|
 | Markup | Semantic HTML5 |
-| Styles | Vanilla CSS3 (custom properties, Grid, Flexbox, `clamp()`) |
+| CSS Framework | Bootstrap 5.3.3 (via CDN) |
+| Custom Styles | Vanilla CSS3 (custom properties, Grid, Flexbox, `clamp()`) |
 | Reset | Meyer's CSS Reset v2 (`reset.css`) |
 | Fonts | Google Fonts — Merriweather + Lato |
+| JavaScript | Bootstrap 5 JS Bundle (via CDN) |
 | Images | [Unsplash](https://unsplash.com) (free, no attribution required) |
 | Hosting | GitHub Pages / Vercel / Netlify |
 
-No JavaScript frameworks, no CSS frameworks, no build tools.
+No build tools or package managers required.
 
 ---
 
 ## Project Structure
 
 ```
-PW_LAB2/
-├── index.html      # Main page — all 6 sections
+PW_LAB3/
+├── index.html      # Main page — all sections
 ├── reset.css       # Meyer's CSS reset
-├── style.css       # All custom styles (variables, components, sections)
-├── README.md       # This file
-└── screenshots/    # Add your screenshots here
+├── style.css       # Custom styles (variables, components, sections)
+├── src/            # Static assets (e.g. doctor photo)
+├── init            # Project initialisation notes
+└── README.md       # This file
 ```
 
 ---
@@ -81,22 +84,13 @@ Just open `index.html` in any modern browser — no dependencies or build step r
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/PW_LAB2.git
-cd PW_LAB2
+git clone https://github.com/yourusername/PW_LAB3.git
+cd PW_LAB3
 
 # Open directly
 start index.html    # Windows
 open index.html     # macOS
 ```
-
----
-
-## Deployment (GitHub Pages)
-
-1. Push the repository to GitHub
-2. Go to **Settings → Pages**
-3. Set source to the `main` branch, root folder
-4. Your site will be live at `https://yourusername.github.io/PW_LAB2/`
 
 ---
 
@@ -112,4 +106,4 @@ open index.html     # macOS
 
 ---
 
-_Lab 2 — Web Programming, 2026_
+_Lab 3 — Web Programming, 2026_
