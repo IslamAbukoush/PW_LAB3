@@ -899,7 +899,7 @@ body {
 
 .contact__details li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.9rem;
 }
 
@@ -915,6 +915,7 @@ body {
 }
 
 .contact__details-icon svg {
+  display: block;
   width: 18px;
   height: 18px;
   stroke: var(--color-primary);
@@ -1049,6 +1050,11 @@ body {
 .contact__form > .row {
   margin-left: 0;
   margin-right: 0;
+}
+
+/* Fix: Bootstrap col-sm-6 sets width:50% which shrinks inputs inside the CSS grid cells */
+.form-row .form-group {
+  width: 100%;
 }
 
 @media (max-width: 860px) {
