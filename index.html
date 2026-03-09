@@ -801,6 +801,19 @@
       });
     }
 
+    // ── Hide navbar on scroll down, show on scroll up ──
+    const siteHeader = document.querySelector('.site-header');
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 72) {
+        siteHeader.classList.add('nav-hidden');
+      } else {
+        siteHeader.classList.remove('nav-hidden');
+      }
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+
     // ── Scroll Reveal ──
     const revealEls = [
       ...document.querySelectorAll('.service-card'),
