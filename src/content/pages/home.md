@@ -9,7 +9,6 @@ hero:
   title_sub: Starts Here
   lead: State-of-the-art dentistry delivered with compassion and precision. From
     routine check-ups to complete smile makeovers — we've got you covered.
-    (CHANGES)
   cta_primary_text: Book an Appointment
   cta_secondary_text: Explore Services
   bg_image: https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&q=80&auto=format&fit=crop
