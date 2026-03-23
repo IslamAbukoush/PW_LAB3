@@ -249,52 +249,12 @@ const serviceIconPaths: Record<string, string> = {
         </div>
 
         <div class="gallery__grid">
-
-          <figure class="gallery__item gallery__item--tall">
-            <img
-              src="https://images.unsplash.com/photo-1584467735815-f778f274e296?w=800&q=80&auto=format&fit=crop"
-              alt="Dentist examining a patient in a modern dental chair"
-              loading="lazy"
-            />
-            <figcaption>Gentle, attentive care</figcaption>
-          </figure>
-
-          <figure class="gallery__item">
-            <img
-              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80&auto=format&fit=crop"
-              alt="Modern dental clinic reception area"
-              loading="lazy"
-            />
-            <figcaption>Welcoming reception</figcaption>
-          </figure>
-
-          <figure class="gallery__item">
-            <img
-              src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80&auto=format&fit=crop"
-              alt="State-of-the-art dental equipment"
-              loading="lazy"
-            />
-            <figcaption>State-of-the-art equipment</figcaption>
-          </figure>
-
-          <figure class="gallery__item gallery__item--wide">
-            <img
-              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=1200&q=80&auto=format&fit=crop"
-              alt="Patient smiling with perfect white teeth after treatment"
-              loading="lazy"
-            />
-            <figcaption>Real smile results</figcaption>
-          </figure>
-
-          <figure class="gallery__item">
-            <img
-              src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=800&q=80&auto=format&fit=crop"
-              alt="Dentist discussing treatment plan with patient"
-              loading="lazy"
-            />
-            <figcaption>Clear communication, every visit</figcaption>
-          </figure>
-
+          {gallery.items.map((item: { src: string; alt: string; caption: string; tall: boolean; wide: boolean }) => (
+            <figure class={`gallery__item${item.tall ? ' gallery__item--tall' : ''}${item.wide ? ' gallery__item--wide' : ''}`}>
+              <img src={item.src} alt={item.alt} loading="lazy" />
+              <figcaption>{item.caption}</figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>

@@ -91,6 +91,32 @@ gallery:
   eyebrow: "Our Clinic & Results"
   title: "A Glimpse Inside"
   subtitle: "Modern equipment, a calming atmosphere, and smile results that speak for themselves."
+  items:
+    - src: "https://images.unsplash.com/photo-1584467735815-f778f274e296?w=800&q=80&auto=format&fit=crop"
+      alt: "Dentist examining a patient in a modern dental chair"
+      caption: "Gentle, attentive care"
+      tall: true
+      wide: false
+    - src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80&auto=format&fit=crop"
+      alt: "Modern dental clinic reception area"
+      caption: "Welcoming reception"
+      tall: false
+      wide: false
+    - src: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80&auto=format&fit=crop"
+      alt: "State-of-the-art dental equipment"
+      caption: "State-of-the-art equipment"
+      tall: false
+      wide: false
+    - src: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=1200&q=80&auto=format&fit=crop"
+      alt: "Patient smiling with perfect white teeth after treatment"
+      caption: "Real smile results"
+      tall: false
+      wide: true
+    - src: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=800&q=80&auto=format&fit=crop"
+      alt: "Dentist discussing treatment plan with patient"
+      caption: "Clear communication, every visit"
+      tall: false
+      wide: false
 
 contact:
   eyebrow: "Get In Touch"

@@ -31,7 +31,7 @@ collections:
               - { label: "Lead Paragraph", name: lead, widget: text }
               - { label: "Primary CTA Text", name: cta_primary_text, widget: string }
               - { label: "Secondary CTA Text", name: cta_secondary_text, widget: string }
-              - { label: "Background Image URL", name: bg_image, widget: string }
+              - { label: "Background Image", name: bg_image, widget: image }
               - label: Trust Items
                 name: trust_items
                 widget: list
@@ -68,7 +68,7 @@ collections:
             fields:
               - { label: Eyebrow, name: eyebrow, widget: string }
               - { label: Doctor Name, name: name, widget: string }
-              - { label: Photo Path, name: photo, widget: string }
+              - { label: Photo, name: photo, widget: image }
               - { label: Photo Alt Text, name: photo_alt, widget: string }
               - { label: Experience Years Badge, name: experience_years, widget: string }
               - { label: Biography Paragraph 1, name: bio1, widget: text }
@@ -93,7 +93,7 @@ collections:
                   - { label: Patient Name, name: name, widget: string }
                   - { label: Treatment Label, name: treatment, widget: string }
                   - { label: Quote, name: quote, widget: text }
-                  - { label: Avatar URL, name: avatar, widget: string }
+                  - { label: Avatar Photo, name: avatar, widget: image }
 
           - label: Stats Bar
             name: stats
@@ -109,6 +109,15 @@ collections:
               - { label: Eyebrow, name: eyebrow, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text }
+              - label: Gallery Images
+                name: items
+                widget: list
+                fields:
+                  - { label: Image, name: src, widget: image }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Caption, name: caption, widget: string }
+                  - { label: "Tall (spans 2 rows)", name: tall, widget: boolean, default: false }
+                  - { label: "Wide (spans 2 columns)", name: wide, widget: boolean, default: false }
 
           - label: Contact Section
             name: contact
