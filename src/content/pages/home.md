@@ -112,7 +112,7 @@ stats:
   - number: "12"
     label: Services Offered
 gallery:
-  visible: false
+  visible: true
   eyebrow: Our Clinic & Results
   title: A Glimpse Inside
   subtitle: Modern equipment, a calming atmosphere, and smile results that speak
