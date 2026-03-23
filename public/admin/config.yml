@@ -42,6 +42,7 @@ collections:
             name: services
             widget: object
             fields:
+              - { label: "Show Section", name: visible, widget: boolean, default: true }
               - { label: Eyebrow, name: eyebrow, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text }
@@ -66,6 +67,7 @@ collections:
             name: about
             widget: object
             fields:
+              - { label: "Show Section", name: visible, widget: boolean, default: true }
               - { label: Eyebrow, name: eyebrow, widget: string }
               - { label: Doctor Name, name: name, widget: string }
               - { label: Photo, name: photo, widget: image }
@@ -83,6 +85,7 @@ collections:
             name: testimonials
             widget: object
             fields:
+              - { label: "Show Section", name: visible, widget: boolean, default: true }
               - { label: Eyebrow, name: eyebrow, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text }
@@ -106,6 +109,7 @@ collections:
             name: gallery
             widget: object
             fields:
+              - { label: "Show Section", name: visible, widget: boolean, default: true }
               - { label: Eyebrow, name: eyebrow, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text }
@@ -123,6 +127,7 @@ collections:
             name: contact
             widget: object
             fields:
+              - { label: "Show Section", name: visible, widget: boolean, default: true }
               - { label: Eyebrow, name: eyebrow, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Lead Paragraph, name: lead, widget: text }

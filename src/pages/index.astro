@@ -123,7 +123,7 @@ const serviceIconPaths: Record<string, string> = {
     <!-- ══════════════════════════════════════
          SECTION 2 — SERVICES
     ══════════════════════════════════════ -->
-    <section class="services section section--alt" id="services">
+    {services.visible !== false && <section class="services section section--alt" id="services">
       <div class="container">
         <div class="section-header">
           <span class="section-header__eyebrow">{services.eyebrow}</span>
@@ -144,12 +144,12 @@ const serviceIconPaths: Record<string, string> = {
           ))}
         </ul>
       </div>
-    </section>
+    </section>}
 
     <!-- ══════════════════════════════════════
          SECTION 3 — ABOUT
     ══════════════════════════════════════ -->
-    <section class="about section" id="about">
+    {about.visible !== false && <section class="about section" id="about">
       <div class="container about__inner">
 
         <div class="about__image-wrap">
@@ -185,12 +185,12 @@ const serviceIconPaths: Record<string, string> = {
         </div>
 
       </div>
-    </section>
+    </section>}
 
     <!-- ══════════════════════════════════════
          SECTION 4 — TESTIMONIALS
     ══════════════════════════════════════ -->
-    <section class="testimonials section section--alt" id="testimonials">
+    {testimonials.visible !== false && <section class="testimonials section section--alt" id="testimonials">
       <div class="container">
         <div class="section-header">
           <span class="section-header__eyebrow">{testimonials.eyebrow}</span>
@@ -234,12 +234,12 @@ const serviceIconPaths: Record<string, string> = {
         </ul>
 
       </div>
-    </section>
+    </section>}
 
     <!-- ══════════════════════════════════════
          SECTION 5 — GALLERY
     ══════════════════════════════════════ -->
-    <section class="gallery section" id="gallery">
+    {gallery.visible !== false && <section class="gallery section" id="gallery">
       <div class="container">
         <div class="section-header">
           <span class="section-header__eyebrow">{gallery.eyebrow}</span>
@@ -257,12 +257,12 @@ const serviceIconPaths: Record<string, string> = {
           ))}
         </div>
       </div>
-    </section>
+    </section>}
 
     <!-- ══════════════════════════════════════
          SECTION 6 — CONTACT
     ══════════════════════════════════════ -->
-    <section class="contact section section--alt" id="contact">
+    {contact.visible !== false && <section class="contact section section--alt" id="contact">
       <div class="container contact__inner">
 
         <div class="contact__info">
@@ -370,7 +370,7 @@ const serviceIconPaths: Record<string, string> = {
         </div>
 
       </div>
-    </section>
+    </section>}
 
   </main>
 

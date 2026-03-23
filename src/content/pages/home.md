@@ -17,6 +17,7 @@ hero:
     - text: 3 500+ Happy Patients
     - text: Certified & Insured
 services:
+  visible: true
   eyebrow: What We Offer
   title: Our Dental Services
   subtitle: From preventive care to complete smile transformations, we provide
@@ -47,6 +48,7 @@ services:
       description: Gentle, pain-free treatment to save an infected tooth, eliminate
         discomfort and restore full function — often in a single appointment.
 about:
+  visible: true
   experience_years: 20+
   bio1: Dr. Yousef Abu Koush is a highly experienced general and cosmetic dentist
     with over 20 years of dedicated practice. He earned his dental degree with
@@ -67,6 +69,7 @@ about:
     - Advanced Training in Dental Implants & Veneers
     - Fluent in Arabic, English & Hebrew
 testimonials:
+  visible: true
   eyebrow: Patient Stories
   title: What Our Patients Say
   subtitle: Real experiences from real patients. We are proud of the trust our
@@ -109,6 +112,7 @@ stats:
   - number: "12"
     label: Services Offered
 gallery:
+  visible: true
   eyebrow: Our Clinic & Results
   title: A Glimpse Inside
   subtitle: Modern equipment, a calming atmosphere, and smile results that speak
@@ -140,6 +144,7 @@ gallery:
       tall: false
       wide: false
 contact:
+  visible: true
   eyebrow: Get In Touch
   title: Book Your Appointment
   lead: Ready for a healthier, more confident smile? Fill out the form and our
