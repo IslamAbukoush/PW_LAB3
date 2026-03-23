@@ -22,6 +22,18 @@ const { title, description } = Astro.props;
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmx6IUKCoJR08nhkrgBkq11D3gm" crossorigin="anonymous"></script>
   <script is:inline>
     if (window.netlifyIdentity) {
+      var hash = window.location.hash;
+      // If the URL contains an identity token, explicitly open the widget modal
+      if (hash && (
+        hash.includes('invite_token') ||
+        hash.includes('confirmation_token') ||
+        hash.includes('recovery_token')
+      )) {
+        window.netlifyIdentity.on('init', function() {
+          window.netlifyIdentity.open();
+        });
+      }
+      // After login, redirect to CMS admin
       window.netlifyIdentity.on('init', function(user) {
         if (!user) {
           window.netlifyIdentity.on('login', function() {
