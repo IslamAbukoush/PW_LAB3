@@ -4,6 +4,8 @@ meta:
   description: Dr. Yousef Abu Koush — Expert dental care you can trust. Modern
     dentistry with a gentle touch.
 hero:
+  visible: true
+  show_mobile_info: true
   eyebrow: Your Trusted Dental Partner
   title: A Healthier Smile
   title_sub: Starts Here

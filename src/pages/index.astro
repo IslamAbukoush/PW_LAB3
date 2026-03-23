@@ -60,7 +60,7 @@ const serviceIconPaths: Record<string, string> = {
     <!-- ══════════════════════════════════════
          SECTION 1 — HERO
     ══════════════════════════════════════ -->
-    <section class="hero" id="home">
+    {hero.visible !== false && <section class="hero" id="home">
       <div class="hero__overlay" aria-hidden="true"></div>
       <img
         class="hero__bg"
@@ -92,12 +92,12 @@ const serviceIconPaths: Record<string, string> = {
           </li>
         </ul>
       </div>
-    </section>
+    </section>}
 
     <!-- ══════════════════════════════════════
          MOBILE ONLY — QUICK INFO STRIP
     ══════════════════════════════════════ -->
-    <section class="mobile-quick-info" aria-label="Why choose us" id="mobileQuickInfo">
+    {hero.show_mobile_info !== false && <section class="mobile-quick-info" aria-label="Why choose us" id="mobileQuickInfo">
       <div class="container">
         <h2 class="mobile-quick-info__title">Why Dr. Yousef?</h2>
         <div class="mobile-quick-info__cards">
@@ -118,7 +118,7 @@ const serviceIconPaths: Record<string, string> = {
         </div>
         <a href="#contact" class="btn mobile-quick-info__cta">Book Your Appointment &rarr;</a>
       </div>
-    </section>
+    </section>}
 
     <!-- ══════════════════════════════════════
          SECTION 2 — SERVICES

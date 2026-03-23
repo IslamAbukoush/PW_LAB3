@@ -25,6 +25,8 @@ collections:
             name: hero
             widget: object
             fields:
+              - { label: "Show Hero Section", name: visible, widget: boolean, default: true }
+              - { label: "Show Mobile Quick Info Strip", name: show_mobile_info, widget: boolean, default: true }
               - { label: "Eyebrow Text", name: eyebrow, widget: string }
               - { label: "Title Line 1", name: title, widget: string }
               - { label: "Title Line 2", name: title_sub, widget: string }
