@@ -1,0 +1,130 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home Page
+        file: src/content/pages/home.md
+        fields:
+
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: "Page Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: string }
+
+          - label: Hero Section
+            name: hero
+            widget: object
+            fields:
+              - { label: "Eyebrow Text", name: eyebrow, widget: string }
+              - { label: "Title Line 1", name: title, widget: string }
+              - { label: "Title Line 2", name: title_sub, widget: string }
+              - { label: "Lead Paragraph", name: lead, widget: text }
+              - { label: "Primary CTA Text", name: cta_primary_text, widget: string }
+              - { label: "Secondary CTA Text", name: cta_secondary_text, widget: string }
+              - { label: "Background Image URL", name: bg_image, widget: string }
+              - label: Trust Items
+                name: trust_items
+                widget: list
+                fields:
+                  - { label: Text, name: text, widget: string }
+
+          - label: Services Section
+            name: services
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text }
+              - label: Service Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - label: Icon
+                    name: icon
+                    widget: select
+                    options:
+                      - { label: "Tooth", value: tooth }
+                      - { label: "Smile", value: smile }
+                      - { label: "Implant", value: implant }
+                      - { label: "Braces", value: braces }
+                      - { label: "Veneer", value: veneer }
+                      - { label: "Root Canal", value: rootcanal }
+                  - { label: Description, name: description, widget: text }
+
+          - label: About Section
+            name: about
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Doctor Name, name: name, widget: string }
+              - { label: Photo Path, name: photo, widget: string }
+              - { label: Photo Alt Text, name: photo_alt, widget: string }
+              - { label: Experience Years Badge, name: experience_years, widget: string }
+              - { label: Biography Paragraph 1, name: bio1, widget: text }
+              - { label: Biography Paragraph 2, name: bio2, widget: text }
+              - label: Highlights
+                name: highlights
+                widget: list
+                field: { label: Item, name: item, widget: string }
+              - { label: CTA Button Text, name: cta_text, widget: string }
+
+          - label: Testimonials Section
+            name: testimonials
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text }
+              - label: Testimonial Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Patient Name, name: name, widget: string }
+                  - { label: Treatment Label, name: treatment, widget: string }
+                  - { label: Quote, name: quote, widget: text }
+                  - { label: Avatar URL, name: avatar, widget: string }
+
+          - label: Stats Bar
+            name: stats
+            widget: list
+            fields:
+              - { label: Number, name: number, widget: string }
+              - { label: Label, name: label, widget: string }
+
+          - label: Gallery Section
+            name: gallery
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text }
+
+          - label: Contact Section
+            name: contact
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Lead Paragraph, name: lead, widget: text }
+              - { label: Address, name: address, widget: string }
+              - { label: Phone, name: phone, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: "Weekday Hours", name: hours_weekday, widget: string }
+              - { label: "Weekend Hours", name: hours_weekend, widget: string }
+
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Tagline, name: tagline, widget: text }
