@@ -48,7 +48,6 @@ services:
       description: Gentle, pain-free treatment to save an infected tooth, eliminate
         discomfort and restore full function — often in a single appointment.
 about:
-  visible: true
   experience_years: 20+
   bio1: Dr. Yousef Abu Koush is a highly experienced general and cosmetic dentist
     with over 20 years of dedicated practice. He earned his dental degree with
@@ -60,6 +59,7 @@ about:
     smile makeover, Dr. Abu Koush takes the time to listen, explain, and deliver
     results that last."
   name: Dr. Yousef Abu Koush
+  visible: true
   photo: /doc.png
   cta_text: Book a Consultation
   photo_alt: Dr. Yousef Abu Koush in his dental clinic
@@ -112,7 +112,7 @@ stats:
   - number: "12"
     label: Services Offered
 gallery:
-  visible: true
+  visible: false
   eyebrow: Our Clinic & Results
   title: A Glimpse Inside
   subtitle: Modern equipment, a calming atmosphere, and smile results that speak
@@ -144,16 +144,16 @@ gallery:
       tall: false
       wide: false
 contact:
-  visible: true
   eyebrow: Get In Touch
+  phone: +962 6 555 0192
+  visible: true
+  address: 14 Al-Nahda Street, Amman, Jordan
+  hours_weekend: "Fri – Sat: 10:00 AM – 3:00 PM"
+  hours_weekday: "Sun – Thu: 9:00 AM – 7:00 PM"
   title: Book Your Appointment
   lead: Ready for a healthier, more confident smile? Fill out the form and our
     team will confirm your appointment within 24 hours.
-  address: 14 Al-Nahda Street, Amman, Jordan
-  phone: +962 6 555 0192
   email: info@abukoush-dental.com
-  hours_weekday: "Sun – Thu: 9:00 AM – 7:00 PM"
-  hours_weekend: "Fri – Sat: 10:00 AM – 3:00 PM"
 footer:
   tagline: Caring for your smile since 2004. Modern dentistry with a gentle,
     personal touch.
